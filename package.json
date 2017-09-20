@@ -2,9 +2,10 @@
   "name": "hodash.get",
   "version": "1.0.0",
   "description": "Gets nested properties.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "babel --presets es2015,stage-0 -d lib/ src/",
+    "prepublish": "npm run compile"
   },
   "keywords": [
     "lodash",
@@ -15,5 +16,10 @@
     "deep"
   ],
   "author": "Tomas Savigliano",
-  "license": "ISC"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-0": "6.24.1"
+  }
 }
